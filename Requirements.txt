@@ -1,0 +1,39 @@
+# ============================================================
+# AI Meeting Assistant - requirements.txt
+# Python 3.10 - 3.12 recommended
+# System dependency: ffmpeg must be installed separately
+#   (Windows: choco install ffmpeg | macOS: brew install ffmpeg
+#    Ubuntu: sudo apt install ffmpeg)
+# ============================================================
+
+# --- UI ---
+streamlit>=1.40.0
+
+# --- Audio download (YouTube URLs) ---
+yt-dlp>=2024.12.0
+
+# --- Local speech-to-text (also handles Hindi -> English via task="translate") ---
+openai-whisper>=20240930
+torch>=2.2.0
+numpy>=1.26.0
+
+# --- LangChain (LCEL chains, prompts, output parsers) ---
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+
+# --- Mistral free API (LLM for summary, action items, decisions, RAG chat) ---
+langchain-mistralai>=0.2.0
+
+# --- RAG: vector store + embeddings ---
+chromadb>=0.5.0
+langchain-chroma>=0.1.4
+langchain-huggingface>=0.1.0
+sentence-transformers>=3.0.0
+
+# --- Export (PDF / TXT) ---
+fpdf2>=2.8.0
+
+# --- Config / environment variables (MISTRAL_API_KEY in .env) ---
+python-dotenv>=1.0.0
